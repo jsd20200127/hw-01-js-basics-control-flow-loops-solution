@@ -74,13 +74,21 @@ console.log('Problem 2:')
 
 // Add your code below this line
 
+/*
+call .sort() and pass `(a, b) => b - a`  as the sort algorithm
+to sort words in descending order,
+
+docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+*/
+
 const values = [3, 48, 29, 12, 18]
 
-/*
-call .sort() on an array (this will do an ascending sort),
-then call .reverse() to make it a descending sort <- this is an example of method chaining
-*/
-const sortedValues = values.sort().reverse()
+const sortedValues = values.sort((a, b) => {
+  return b - a
+})
+
+// after sorting numbers in descending, return the "first"
+// number in the sorted array
 console.log(sortedValues[0])
 
 // Add your code above this line
