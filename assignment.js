@@ -91,6 +91,19 @@ const sortedValues = values.sort((a, b) => {
 // number in the sorted array
 console.log(sortedValues[0])
 
+console.log('using a for loop...')
+
+let currentLargestNumber = 0
+
+for (let i = 0; i < values.length; i++) {
+  if (currentLargestNumber < values[i]) {
+    currentLargestNumber = values[i]
+  }
+}
+
+console.log(currentLargestNumber)
+
+
 // Add your code above this line
 
 console.log('')
